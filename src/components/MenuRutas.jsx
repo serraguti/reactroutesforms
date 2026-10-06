@@ -19,6 +19,9 @@ export default class MenuRutas extends Component{
                 <li>
                     <a href="/collatz">Collatz | </a>
                 </li>
+                <li>
+                    <a href="/tabla">Tabla multiplicar | </a>
+                </li>
             </ul>
         </div>)
     }
