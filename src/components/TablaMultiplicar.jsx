@@ -9,11 +9,10 @@ export default class TablaMultiplicar extends Component {
         for (var i = 1; i <= 10; i++){
             let operacion = numero + " * " + i;
             let resultado = numero * i;
-            let dato = {
-                operacion: operacion,
-                resultado: resultado 
-            }
-            aux.push(dato);
+            aux.push(<tr key={i}>
+                <td>{operacion}</td>
+                <td>{resultado}</td>
+            </tr>);
         }
         this.setState({
             tabla: aux
@@ -41,10 +40,7 @@ export default class TablaMultiplicar extends Component {
             <tbody>
                 {
                     this.state.tabla.map((fila, index) => {
-                        return (<tr key={index}>
-                            <td>{fila.operacion}</td>
-                            <td>{fila.resultado}</td>
-                        </tr>)
+                        return (fila)
                     })
                 }
             </tbody>
